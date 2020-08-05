@@ -13,6 +13,7 @@ class Regression_model:
         self.lin_reg.fit(self.x, self.y)
 
     def graph(self):
+        plt.ion()
         plt.scatter(self.x, self.y, color = "blue")
         plt.plot(self.x, self.lin_reg.predict(self.x), color = "red", linewidth = 3)
         plt.show()
